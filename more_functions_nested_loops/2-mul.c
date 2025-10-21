@@ -5,5 +5,5 @@
  *@b - 2 integer
  *Return - a * b
  */
-int mul(int'a', int'b')
+int mul(int a, int b)
 return (a * b);
