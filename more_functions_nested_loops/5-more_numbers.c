@@ -1,10 +1,9 @@
 #include "main.h"
 
-void print_most_numbers(void)
-
-int i;
-for (i = 0 ; i <= 14 ; count++)
+void more_numbers(void)
 {
+int i;
+for (i = 0 ; i <= 14 ; i++)
 _putchar(i);
-_putchar(\n); 
+_putchar('\n'); 
 }
