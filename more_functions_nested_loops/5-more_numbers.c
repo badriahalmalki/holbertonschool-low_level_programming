@@ -2,10 +2,9 @@
 
 void print_most_numbers(void)
 
-int i = 0; i <= 14
-do
+int i;
+for (i = 0 ; i <= 14 ; count++)
 {
 _putchar(i);
-i++;
+_putchar(\n); 
 }
-while (count <10);
