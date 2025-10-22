@@ -1,8 +1,9 @@
 #include "main.h"
 
 void print_most_numbers(void)
+{
 int i;
-for (i = '0'; i <= '9'; i++)
-if (i != '2' && i != '4')
+do (i = '0'; i <= '14'; i++);
 _putchar(i);
-_putchar('\n');
+while (count <10);
+}
