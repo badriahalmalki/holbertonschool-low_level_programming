@@ -13,8 +13,14 @@ _putchar('\n');
 }
 else
 {
-for ( = 0; i < n; i++)
-_putchar('_');
+for (i = 0; i < n; i++)
+{
+for (int j = 0; j <; j++)
+{
+_putchar('');
+}
+_putchar('\\');
 _putchar('\n');
+}
 }
 }
