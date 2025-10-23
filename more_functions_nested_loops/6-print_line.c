@@ -1,8 +1,7 @@
-#include "main.h":
+#include "main.h"
 /**
- * print_line - draws a line 
+ * print_line - draws a line
  * @n: print  _
- *
  * Return: void
  */
 void print_line(int n)
