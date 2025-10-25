@@ -1,16 +1,28 @@
 #include "main.h"
 
-void print_array(int *a, int n)
+/**
+ * puts_half - prints half of a string, followed by a new line
+ * @str: pointer to the string
+ */
+void puts_half(char *str)
 {
-    int i;
+    int len = 0;
+    int start;
 
-    for (i = 0; i < n; i++)
+    while (str[len] != '\0')
     {
-        _putchar("%d", a[i]);
-        if (i < n - 1)
-        {
-            _putchar(", ");
-        }
+        len++;
     }
-    _putchar("\n");
+
+    if (len % 2 == 0)
+        start = len / 2;
+    else
+        start = (len - 1) / 2 + 1;
+
+    while (str[start] != '\0')
+    {
+        _putchar(str[start]);
+        start++;
+    }
+    _putchar('\n');
 }
