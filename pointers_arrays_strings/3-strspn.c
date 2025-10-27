@@ -4,8 +4,9 @@
 * _strspn - gets the length of a prefix substring
 * @s: the string we want to analyze
 * @accept: the string containing the characters we want to check against
-* Returns: the number of bytes in the initial segment of @s that consist
-* only of characters from @accept
+*
+* Returns: the number of bytes in the initial segment of @s that 
+* consist only of bytes from @accept
 */
 unsigned int _strspn(char *s, char *accept)
 {
