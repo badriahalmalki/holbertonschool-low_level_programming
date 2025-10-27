@@ -1,0 +1,24 @@
+#include "main.h"
+#include <stddef.h>
+/**
+ * _strspn - gets the length of a prefix substring
+ * @s: the string we want to analyze
+ * @accept: the string containing the characters we want to check against
+ * return: the number of bytes in the initial segment of s that consist only of characters found in accept
+ */
+unsigned int _strspn(char *s, char *accept)
+unsigned int count = 0;
+int i, j; 
+{
+for (i =0; s[i] != '\0' i++)
+{
+if (s[i] == accept [j]);
+{
+count++;
+}
+}
+if (accept [j] == '\0')
+}
+}
+return count;
+}
