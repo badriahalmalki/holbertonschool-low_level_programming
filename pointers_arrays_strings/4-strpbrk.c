@@ -3,8 +3,7 @@
 * _strpbrk - searches a string for any of a set of bytes.
 * @s: string
 * @accept: string
-* Returns: a pointer to the byte in s that matches one of the bytes in accept 
-* or NULL if no such byte is found
+* Returns: a pointer or NULL
 */
 char *_strpbrk(char *s, char *accept)
 {
@@ -21,4 +20,3 @@ return &s[i];
 }
 return NULL;
 }
-
