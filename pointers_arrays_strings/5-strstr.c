@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * _strstr - locatee a substrung 
- * @needle: the substring 
+ * _strstr - locatee a substrung
+ * @needle: the substring
  * @haystack: the string
- * Returns: pointer to the beginning of the located substring
+ * Return: pointer to the beginning of the located substring
  */
 char *_strstr(char *haystack, char *needle)
 {
@@ -20,5 +20,5 @@ break;
 if (needle[j] == '\0')
 return (&haystack[i]);
 }
-return (needle);
+return (0);
 }
