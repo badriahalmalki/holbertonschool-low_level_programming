@@ -5,8 +5,7 @@
 * @s: the string we want to analyze
 * @accept: the string containing the characters we want to check against
 *
-* Returns: the number of bytes in the initial segment of @s that 
-* consist only of bytes from @accept
+* Return: the number of bytes in the initial segment
 */
 unsigned int _strspn(char *s, char *accept)
 {
