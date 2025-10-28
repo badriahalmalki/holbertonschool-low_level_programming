@@ -4,7 +4,8 @@
 * @n: how many bytes to fill
 * @s: pointer
 * @b: the actual bite that we will use
-* retern: a pointer to the memory area s
+*
+* Return: pointer to the filled memory area.
 */
 char *_memset(char *s, char b, unsigned int n)
 {
