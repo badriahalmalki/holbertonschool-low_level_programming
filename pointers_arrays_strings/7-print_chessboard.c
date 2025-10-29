@@ -1,23 +1,18 @@
-#include "maine.h"
+#include "main.h"
 #include <stdio.h>
 /**
-* _chessboard -  prints the chessboard
-* @a:
-* Retern: a chessboard
+* print_chessboard - prints the chessboard
+* @a: visual representing of the chessboard
 */
-void print_chessboard(char (*a)[8]);
-void printChessboard()
+void print_chessboard(char (*a)[8])
 {
-int  main() {
-int arr[8][8] = {r,k,b,q,k,b,k,r};
-int arr[8][8] = {' ',' '};
 int i, j;
-
-for (i=0; i<1; i++){
-for (j=0; j<5; j++){
-printf("%4d", arr[i][j]);
+for (i = 0; i < 8; i++)
+{
+for (j = 0; j < 8; j++)
+{
+printf("%c ", a[i][j]);
 }
 printf("\n");
 }
-return 0;
 }
