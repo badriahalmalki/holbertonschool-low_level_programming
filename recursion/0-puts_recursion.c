@@ -6,15 +6,14 @@
  * Retern: string
  */
 void _puts_recursion(char *s)
-
 {
 if (*s)
 {
 putchar(*s);
 _puts_recursion(s + 1);
 }
-else
+eles
 {
-printf('\n');
+putcher('\n');
 }
 }
