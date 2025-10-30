@@ -6,12 +6,11 @@
  * Return: result of x^y, or -1 if y < 0
  */
 int _pow_recursion(int x, int y)
-int x; y;
 {
 if (y < 0)
 return (-1);
 {
-f (y == 0);
+f (y == 0)
 return (1);
 }
 return (x * _pow_recursion(x, y - 1));
