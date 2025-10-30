@@ -2,7 +2,7 @@
 /**
  * _pow_recursion - returns the value of x raised to the power of y
  * @x: base number
- * @y: power 
+ * @y: power by ^
  * Return: result of x^y, or -1 if y < 0
  */
 int _pow_recursion(int x, int y)
