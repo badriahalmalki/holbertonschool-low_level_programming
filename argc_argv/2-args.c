@@ -2,9 +2,9 @@
 int main(int argc, char *argv[])
 {
 int j;
-for (i = 0; i < argc; i++)
+for (j = 0; j < argc; i++)
 {
-printf("%s\n", argv[i]);
+printf("%s\n", argv[j]);
 }
 return (0);
 }
