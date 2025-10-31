@@ -1,11 +1,13 @@
 #include "main.h"
+
 /**
- * check_prime - helper function to check if n is divisible by x
- * @n: the number to check
- * @x: the current divisor
- *
- * Return: 1 if n is prime, 0 otherwise
- */
+* check_prime - helper function to check if n is divisible by x
+* @n: the number to check
+* @x: the current divisor
+*
+* Return: 1 if n is prime, 0 otherwise
+*/
+int check_prime(int n, int x)
 {
 if (x * x > n)
 return (1);
