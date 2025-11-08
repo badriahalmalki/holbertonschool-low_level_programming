@@ -1,14 +1,16 @@
-#include "dog.h"
 #include <stdio.h>
+#include "dog.h"
 
+/**
+* main - check the code
+*
+* Return: Always 0.
+*/
 int main(void)
 {
-	struct dog my_sunny;
+	struct dog my_dog;
 
-init_dog(&my_sunny, "Sunny", 1.5, "Bariyah");
-	printf("Name: %s\n", my_sunny.name);
-	printf("Age: %.1f\n", my_sunny.age);
-	printf("Owner: %s\n", my_sunny.owner);
-
+	init_dog(&my_dog, "Poppy", 3.5, "Bob");
+	printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog.name, my_dog.age);
 	return (0);
 }
