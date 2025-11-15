@@ -1,5 +1,11 @@
 #include "3-calc.h"
-
+/**
+ * op_add - adds two integers
+ * function op_sub - subtracts two integers
+ * function op_mul - multiplies two integers
+ * function op_div - divides two integers
+ * function op_mod - computes the modulus of two integers
+ */
 int op_add(int a, int b)
 {
 	return (a + b);
