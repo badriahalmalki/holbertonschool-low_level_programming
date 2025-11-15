@@ -3,6 +3,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+/**
+ * struct op - Operator function mapping
+ * @op: The operator string
+ * @f: Function pointer to the operation
+ */
 typedef struct op
 {
 	char *op;
