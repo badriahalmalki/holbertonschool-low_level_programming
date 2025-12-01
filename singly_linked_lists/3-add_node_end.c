@@ -12,7 +12,9 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new_node;
+    list_t *current;
 	unsigned int len = 0;
+    
 
 	/* Calculate string length */
 	if (str != NULL)
@@ -40,12 +42,24 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	else
 	{
-		new_node->str = NULL;
+		new_node->str = NULL; /* Handle NULL string case */
 	}
+    /* If the list is empty, make the new node the head */
+    if (*head == NULL)
+    {
+        *head = new_node;
+        return (new_node);
+    }
 
-	new_node->len = len;
-	new_node->next = NULL; /* Point new node's next to the end */
-	*head = new_node;       /* Update head to point to the new node */
+    /* Traverse to the end of the list */
+    current = *head;
+    while (current->next != NULL)
+    {
+        current = current->next;
+    }
 
-	return (new_node);
+    /* Link the new node at the end */
+    current->next = new_node;
+
+    return (new_node);
 }
