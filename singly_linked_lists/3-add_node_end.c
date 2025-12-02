@@ -12,54 +12,39 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new_node;
-    list_t *current;
+	list_t *temp;
 	unsigned int len = 0;
-    
 
-	/* Calculate string length */
-	if (str != NULL)
-	{
-		while (str[len] != '\0')
-			len++;
-	}
-
-	/* Allocate memory for the new node */
+	/* Create a new node */
 	new_node = malloc(sizeof(list_t));
 	if (new_node == NULL)
+		return (NULL);
+
+	/* Duplicate the string and calculate its length */
+	new_node->str = strdup(str);
+	if (new_node->str == NULL)
 	{
-		return (NULL); /* Memory allocation failed */
+		free(new_node);
+		return (NULL);
+	}
+	while (str[len])
+		len++;
+	new_node->len = len;
+	new_node->next = NULL;
+
+	/* If the list is empty, make the new node the head */
+	if (*head == NULL)
+	{
+		*head = new_node;
+		return (new_node);
 	}
 
-	/* Duplicate the string and handle potential failure */
-	if (str != NULL)
-	{
-		new_node->str = strdup(str);
-		if (new_node->str == NULL)
-		{
-			free(new_node); /*Free the allocated node memory*/
-			return (NULL); /* String duplication failed */
-		}
-	}
-	else
-	{
-		new_node->str = NULL; /* Handle NULL string case */
-	}
-    /* If the list is empty, make the new node the head */
-    if (*head == NULL)
-    {
-        *head = new_node;
-        return (new_node);
-    }
+	/* Otherwise, traverse to the end of the list and add the new node */
+	temp = *head;
+	while (temp->next != NULL)
+		temp = temp->next;
+	temp->next = new_node;
 
-    /* Traverse to the end of the list */
-    current = *head;
-    while (current->next != NULL)
-    {
-        current = current->next;
-    }
-
-    /* Link the new node at the end */
-    current->next = new_node;
-
-    return (new_node);
+	return (new_node);
 }
+
