@@ -11,13 +11,13 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	if (filename == NULL) /* Check if filename is NULL */
-	return (0);
-
 	int fd;
 
 	ssize_t r, w;
 	char *buffer;
+
+	if (filename == NULL) /* Check if filename is NULL */
+	return (0);
 
 	buffer = malloc(sizeof(char) * letters); /* Allocate memory for buffer */
 	if (buffer == NULL)
@@ -29,5 +29,24 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	free(buffer);
 	return (0);
 	}
-}
 
+	r = read(fd, buffer, letters); /* Read from the file */
+	if (r == -1)
+	{
+		free(buffer);
+		close(fd);
+		return (0);
+	}
+	w = write(STDOUT_FILENO, buffer, r);
+	if (w == -1 || w != r)
+	{
+		free(buffer);
+		close(fd);
+		return (0);
+	}
+
+	free(buffer);
+	close(fd);
+
+	return (w);
+}
