@@ -1,0 +1,37 @@
+#include "main.h"
+
+
+int create_file(const char *filename, char *text_content)
+{
+	int fd;
+
+	int len;
+
+	ssize_t w;
+	if (filename == NULL)
+		return (-1);
+	/* Count the length of text_content */
+	if (text_content == NULL)
+		len = 0;
+	else
+	{
+		len = 0;
+		while (text_content[len] != '\0')
+			len++;
+	}
+	/* Open the file */
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+	if (fd == -1)
+		return (-1);
+	/* Write to the file */
+	w = write(fd, text_content, len);
+	if (w == -1)
+	{
+		close(fd);
+		return (-1);
+	}
+	/* Close + return */
+	close(fd);
+	return (1);
+}
