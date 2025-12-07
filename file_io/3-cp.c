@@ -4,6 +4,13 @@
 #include <fcntl.h>
 #include <unistd.h>
 
+/**
+ * main - Copies the content of a file to another file.
+ * @argc: The number of command-line arguments.
+ * @argv: An array of command-line argument strings.
+ *
+ * Return: 0 on success, or exits with specific error codes on failure.
+ */
 
 int main(int argc, char *argv[])
 {
@@ -42,20 +49,6 @@ int main(int argc, char *argv[])
             close(fd_to);
             exit(99);
         }
-    }
-
-    if (n_read == -1)
-    {
-        dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-        close(fd_from);
-        close(fd_to);
-        exit(98);
-    }
-
-    if (close(fd_from) == -1)
-    {
-        dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
-        exit(100);
     }
 
     if (close(fd_to) == -1)
